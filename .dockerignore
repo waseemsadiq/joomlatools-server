@@ -32,9 +32,6 @@ volume
 # Fly
 fly.toml
 
-# Cloudflare
-workers
-
 # Themes
 sites/**/theme/node_modules
 sites/**/theme/css/*.map
