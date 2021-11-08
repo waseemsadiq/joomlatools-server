@@ -8,6 +8,9 @@ return array(
     'http_static_cache'    => false,
     'http_client_cache'    => getenv('APP_CACHE') !== false ? filter_var(getenv('APP_CACHE'), FILTER_VALIDATE_BOOLEAN) : true,
 
+    'cache_path' => getenv('APP_VOLUME').'/sites/'.basename(PAGES_SITE_ROOT).'/cache',
+    'log_path'   => getenv('APP_VOLUME').'/sites/'.basename(PAGES_SITE_ROOT).'/log',
+
     //'page_cache_validation'     => filter_var(getenv('APP_CACHE'), FILTER_VALIDATE_BOOLEAN),
     //'template_cache_validation' => filter_var(getenv('APP_CACHE'), FILTER_VALIDATE_BOOLEAN),
     //'data_cache_validation'     => filter_var(getenv('APP_CACHE'), FILTER_VALIDATE_BOOLEAN),
