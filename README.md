@@ -1,7 +1,7 @@
 <div align="center">
   <br>
   <h1>Joomlatools Server</h1>
-  <strong>Frictionless web publishing</strong>
+  <strong>Cloud native web publishing</strong>
 </div>
 <br>
 <p align="center">
@@ -13,11 +13,11 @@
   </a>
 </p>
 
-Welcome to the Joomlatools Server codebase, our home-grown **web publishing platform** that powers all of [joomlatools.com](https://joomlatools.com). 
+Welcome to the Joomlatools Server codebase, our home-grown **cloud native web publishing platform** that powers all of [joomlatools.com](https://joomlatools.com). 
 
 ### What is Joomlatools Server?
 
-Joomlatools Server is an application server  that is specially tailored for building and running [Joomla CMS](https://github.com/joomla/joomla-cms) and [Joomlatools Pages](https://github.com/joomlatools/joomlatools-pages) sites and apps  and is supported on  macOS, Linux, and Windows (via WSL2).
+Joomlatools Server is an application server  that is specially tailored for building and standalone [Joomlatools Pages](https://github.com/joomlatools/joomlatools-pages) sites and apps  and is supported on  macOS, Linux, and Windows (via WSL2).
 
 It’s both a local/remote development environment and a multi-site web server. You can run it locally using Docker Desktop, or remote using Gitpod, or deploy it on any cloud hosting that supports Docker images: [Fly.io](https://fly.io/), [Google App Engine](https://cloud.google.com/appengine), [Google Cloud Run](https://cloud.google.com/run), [Digital Ocean App Plaform](https://www.digitalocean.com/products/app-platform/), [AWS Fargate](https://aws.amazon.com/fargate/), ...
 
@@ -92,9 +92,25 @@ Each application is build on the [`joomlatools-server`](https://github.com/jooml
 - [Ubuntu 20.4](https://ubuntu.com/)
 - [S6 Overlay v2.2](https://github.com/just-containers/s6-overlay)
 - [Apache 2.4](https://httpd.apache.org/)
-- [MySQL 8.0](https://www.mysql.com/)
 - [PHP 7.4](https://www.php.net/)
 - [Swoole 4.7](https://www.swoole.co.uk/)
+
+Optional 
+
+- [MySQL 8.0](https://www.mysql.com/)
+
+#### Tools
+
+- [Composer](https://getcomposer.org/)
+- [Phive](https://phar.io/)
+- [Xdebug](https://xdebug.org/)
+
+### Libs
+
+- [Curl](https://curl.se/libcurl/)
+- [Vips](https://www.libvips.org/)
+
+Other: git, inotify, rsync, htop, nano
 
 ### Multi-process Docker
 
@@ -120,7 +136,11 @@ Each application can provide multiple websites. Sites are proxied through Apache
 
 An application only contains a single composer `/vendor` directory which contains all PHP libraries used by the application libraries, sites and services. The `/vendor` directory is located in `/srv/www/vendor`and composer installation happens during the Docker image build phase.
 
-Composer requires are being handled with delay during `ONBUILD`, the base defines the minimal composer requires and the app that extends from base can define additional requires.
+Composer requires are being handled in 2 stage
+
+#### 1. During image build
+
+With delay during `ONBUILD`, the base defines the minimal composer requires and the app that extends from base can define additional requires.
 
 The [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin) is used to merge composer.json files from following locations:
 
@@ -129,6 +149,11 @@ The [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin) 
 - `/var/www/sites/*/composer.json`
 
 During image build, when Composer is run it will parse these files and merge their configuration settings into the base configuration. This combined configuration will then be used when downloading additional libraries and generating the autoloader.
+
+#### 2. During container run
+
+If the app is running in development mode, `APP_ENV` = `development`, composer will be re-run. This allows to update dependencies and install
+`require-dev` dependencies without needing to rebuild the container or trigger composer manually. To make composer install dev dependencies add `COMPOSER_NO_DEV=0` to you `.env` file or runtime environment.
 
 ### composer.lock
 
@@ -196,19 +221,27 @@ A complete list of all environment variables can be found in [.env.default](http
 
 The server provides following default HTTP(s) endpoints
 
+### Ping
+
+- http://localhost:8080/__ping (alias for http://localhost/__api/ping )
+
+### Metrics
+
+- http://localhost:8080/__metrics (alias for http://localhost/__api/metrics )
+
 ### Status
 
-- http://localhost/__ping
-- http://localhost/__status-php (php-fpm status, local only)
-- http://localhost/__status-apache (apache status, local only)
+- http://localhost:8080/__ping-php (php-fpm ping, local only)
+- http://localhost:8080/__status-php (php-fpm status, local only)
+- http://localhost:8080/__status-apache (apache status, local only)
 
 ### Info
 
-- http://localhost/__info/php-info
-- http://localhost/__info/php-apc
-- http://localhost/__info/php-fpm
-- http://localhost/__info/php-opcache
-- http://localhost/__info/php-xdebug (only if xdebug is enabled)
+- http://localhost:8080/__info/php-info
+- http://localhost:8080/__info/php-apc
+- http://localhost:8080/__info/php-fpm
+- http://localhost:8080/__info/php-opcache
+- http://localhost:8080/__info/php-xdebug (only if xdebug is enabled)
 
 ## Documentation
 

@@ -1,6 +1,6 @@
 <?php
-ini_set('error_reporting', E_ERROR | E_PARSE);
 
+// Set default config
 return [
 
     /* Site */
