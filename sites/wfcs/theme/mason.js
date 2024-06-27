@@ -22,6 +22,7 @@ async function postcss() {
         'bg-right', 
         'object-center', 
         'object-right',
+        'bg-dark-2',
       ],
       theme: {
         screens: {

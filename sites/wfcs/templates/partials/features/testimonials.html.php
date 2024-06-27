@@ -1,3 +1,6 @@
+---
+count: 6
+---
 <section id="testimonials" class="overflow-hidden bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]">
   <div class="container mx-auto">
     <div class="-mx-4 flex flex-wrap justify-center">
@@ -13,7 +16,7 @@
       <div class="swiper testimonial-carousel common-carousel p-5">
         <div class="swiper-wrapper">
 
-          <? foreach (data('testimonials')->shuffle()->slice(0, 6) as $item) : ?>
+          <? foreach (data('testimonials')->shuffle()->slice(0, $count) as $item) : ?>
           <div class="swiper-slide">
             <div class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
               <div class="mb-[18px] flex items-center gap-[2px]">

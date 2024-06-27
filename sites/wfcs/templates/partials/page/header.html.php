@@ -1,5 +1,6 @@
 <?
 $colour = (layout()->pageclass == 'landing') ? '-white' : '';
+$bg_colour =  (layout()->pageclass == 'landing') ? 'white' : 'dark-2';
 ?>
 <!-- ====== Navbar Section Start -->
     <div class="ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent">
@@ -13,9 +14,9 @@ $colour = (layout()->pageclass == 'landing') ? '-white' : '';
           <div class="flex w-full items-center justify-between px-4">
             <div>
               <button id="navbarToggler" class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
-                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
-                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
-                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-<?= $bg_colour ?> dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-<?= $bg_colour ?> dark:bg-white"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-<?= $bg_colour ?> dark:bg-white"></span>
               </button>
 
               <?= import('/partials/navigation/navbar'); ?>

@@ -7,7 +7,7 @@
     processors:
         - 'email':
             recipients:
-                - hello@pages.test
+                - info@wfcs.co.uk
             title: WFCS
             subject: New message from the wfcs contact form
     schema:
@@ -105,7 +105,6 @@ summary: Well foundation community sports helps young people transition into uni
                 <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6"> The Well Foundation Community Sports hub and Academy has successfully provided underserved children in the BME community with access to sports and activities they often lack. <br />
                   <br /> For instance, by collaborating with youth football teams, the organisation has integrated children from diverse backgrounds, enabling them to enjoy sports in safe, professional settings.
                 </p>
-                <a href="javascript:void(0)" class="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark"> Learn More </a>
               </div>
             </div>
             <div class="w-full px-4 lg:w-1/2">
@@ -200,7 +199,7 @@ summary: Well foundation community sports helps young people transition into uni
                   <p class="text-base text-body-color dark:text-dark-6"> Venue: Lanarkshire Mosque, Bellshill </p>
                 </div>
               </div>
-              <a href="javascript:void(0)" class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"> Learn More </a>
+              <a href="/sports/football" class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"> Learn More </a>
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
@@ -220,7 +219,7 @@ summary: Well foundation community sports helps young people transition into uni
                   <p class="text-base text-body-color dark:text-dark-6"> Adults 7s league: Fridays - 9pm-10pm </p>
                 </div>
               </div>
-              <a href="javascript:void(0)" class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"> Learn More </a>
+              <a href="/sports/football" class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"> Learn More </a>
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
@@ -239,12 +238,8 @@ summary: Well foundation community sports helps young people transition into uni
                   <p class="text-base text-body-color dark:text-dark-6"> Outdoor cricket: Weather dependant </p>
                 </div>
               </div>
-              <a href="javascript:void(0)" class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"> Learn More </a>
             </div>
           </div>
-        </div>
-        <div class="wow fadeInUp mx-auto max-w-[780px] text-center mt-12" data-wow-delay=".2s">
-          <a href="javascript:void(0)" class="mx-auto inline-flex items-center justify-center rounded-md border border-secondary bg-secondary px-7 py-3 text-center text-base font-medium text-white hover:border-[#0BB489] hover:bg-[#0BB489]"> View All Sports &amp; Activities </a>
         </div>
       </div>
     </section>
@@ -262,7 +257,7 @@ summary: Well foundation community sports helps young people transition into uni
                   <span class="text-3xl font-normal md:text-[40px]"> Get Started Now </span>
                 </h2>
                 <p class="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white"> With a wide range of sports and activities, we have something to appeal to every interest and skill level. </p>
-                <a href="javascript:void(0)" class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"> Sign Up For Our Sports &amp; Activities </a>
+                <a href="https://linktr.ee/wfcs" class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"> Sign Up For Our Sports &amp; Activities </a>
               </div>
             </div>
           </div>
@@ -577,11 +572,6 @@ summary: Well foundation community sports helps young people transition into uni
                 <h2 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"> How can you help? </h2>
                 <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6"> Join us in empowering the youth of today to shape a brighter tomorrow. <br><br>We continuously seek partnerships with inspirational individuals, innovative organisations, and community members who share our vision. <br><br>Invest your time, resources, and expertise in our cause, and together we will transform the lives of young people.
                 </p>
-                <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
-                  <li>
-                    <a href="javascript:void(0)" class="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark"> Become A Partner </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
