@@ -44,7 +44,7 @@ state:
 <!-- ====== Page title Section End -->
 <section class="pb-10 pt-20 dark:bg-dark lg:pb-20">
     <div class="container">
-        <div class="flex flex-wrap justify-center -mx-4 lg:w-8/12 lg:mx-auto">
+        <div class="flex flex-wrap justify-center max-w-prose mx-auto">
             <div class="mb-8 text-base wow fadeInUp text-body-color dark:text-dark-6" data-wow-delay=".1s">
               <h2 class="wow fadeInUp w-full pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]" data-wow-delay=".1s"> The information that we store </h2>
 
@@ -85,7 +85,7 @@ state:
                 <br>Bellshill, 
                 <br>ML4 1AJ, 
                 <br>Scotland
-                <br>Email: info&#64;wfcs.co.uk
+                <br>Email: <a class="text-dark hover:text-primary dark:text-white" href="mailto:info@wfcs.co.uk">info&#64;wfcs.co.uk</a>
               </p>
 
             </div>
@@ -93,7 +93,7 @@ state:
             <div class="mb-8 text-base wow fadeInUp text-body-color dark:text-dark-6" data-wow-delay=".1s">
               <h3 class="wow fadeInUp w-full mb-6 text-2xl font-semibold text-dark dark:text-white sm:text-[28px] sm:leading-[40px]" data-wow-delay=".1s"> Data subject rights </h3>
 
-              <p>This Privacy Notice is intended to provide you with information about what personal data The Well Foundation community sports collects about you and how it is used. If you have any questions, please contact us at info&#64;wfcs.co.uk
+              <p>This Privacy Notice is intended to provide you with information about what personal data The Well Foundation community sports collects about you and how it is used. If you have any questions, please contact us at <a class="text-dark hover:text-primary dark:text-white" href="mailto:info@wfcs.co.uk">info&#64;wfcs.co.uk</a>
               </p>
             </div>
         </div>

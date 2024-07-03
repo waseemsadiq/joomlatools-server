@@ -44,7 +44,7 @@ state:
 <!-- ====== Page title Section End -->
 <section class="pb-10 pt-20 dark:bg-dark lg:pb-20">
     <div class="container">
-        <div class="flex flex-wrap justify-center -mx-4 lg:w-8/12 lg:mx-auto">
+        <div class="flex flex-wrap justify-center max-w-prose mx-auto">
             <div class="-mx-3 flex items-center justify-center md:justify-start">
               <a href="/legal/privacy" class="px-3 text-base font-medium text-dark dark:text-white"> Privacy policy </a>
               <a href="/legal/terms-and-conditions" class="px-3 text-base font-medium text-dark dark:text-white"> Terms &amp; Conditions </a>

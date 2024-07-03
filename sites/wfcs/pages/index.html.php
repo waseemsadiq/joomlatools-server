@@ -703,7 +703,7 @@ summary: Well foundation community sports helps young people transition into uni
                   </div>
                   <div>
                     <h5 class="mb-[18px] text-lg font-semibold text-dark dark:text-white"> How can we help? </h5>
-                    <p class="text-base text-body-color dark:text-dark-6"> <a href="mailto:info@wfcs.co.uk">info@wfcs.co.uk</a> </p>
+                    <p class="text-base text-body-color dark:text-dark-6"> <a class="text-dark hover:text-primary dark:text-white" href="mailto:info@wfcs.co.uk">info&#64;wfcs.co.uk</a> </p>
                   </div>
                 </div>
               </div>
